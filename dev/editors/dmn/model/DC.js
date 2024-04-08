@@ -30,24 +30,8 @@ var DC_Module_Factory = function () {
             type: 'attribute'
           }]
       }, {
-        localName: 'Bounds',
+        localName: 'Dimension',
         propertyInfos: [{
-            name: 'x',
-            required: true,
-            typeInfo: 'Double',
-            attributeName: {
-              localPart: 'x'
-            },
-            type: 'attribute'
-          }, {
-            name: 'y',
-            required: true,
-            typeInfo: 'Double',
-            attributeName: {
-              localPart: 'y'
-            },
-            type: 'attribute'
-          }, {
             name: 'width',
             required: true,
             typeInfo: 'Double',
@@ -84,8 +68,24 @@ var DC_Module_Factory = function () {
             type: 'attribute'
           }]
       }, {
-        localName: 'Dimension',
+        localName: 'Bounds',
         propertyInfos: [{
+            name: 'x',
+            required: true,
+            typeInfo: 'Double',
+            attributeName: {
+              localPart: 'x'
+            },
+            type: 'attribute'
+          }, {
+            name: 'y',
+            required: true,
+            typeInfo: 'Double',
+            attributeName: {
+              localPart: 'y'
+            },
+            type: 'attribute'
+          }, {
             name: 'width',
             required: true,
             typeInfo: 'Double',
@@ -104,14 +104,17 @@ var DC_Module_Factory = function () {
           }]
       }, {
         type: 'enumInfo',
-        localName: 'AlignmentKind',
-        values: ['start', 'end', 'center']
-      }, {
-        type: 'enumInfo',
         localName: 'KnownColor',
         values: ['maroon', 'red', 'orange', 'yellow', 'olive', 'purple', 'fuchsia', 'white', 'lime', 'green', 'navy', 'blue', 'aqua', 'teal', 'black', 'silver', 'gray']
+      }, {
+        type: 'enumInfo',
+        localName: 'AlignmentKind',
+        values: ['start', 'end', 'center']
       }],
     elementInfos: [{
+        typeInfo: '.Dimension',
+        elementName: 'Dimension'
+      }, {
         typeInfo: '.Color',
         elementName: 'Color'
       }, {
@@ -120,9 +123,6 @@ var DC_Module_Factory = function () {
       }, {
         typeInfo: '.Point',
         elementName: 'Point'
-      }, {
-        typeInfo: '.Dimension',
-        elementName: 'Dimension'
       }]
   };
   return {
