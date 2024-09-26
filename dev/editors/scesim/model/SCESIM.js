@@ -2,168 +2,6 @@ var SCESIM_Module_Factory = function () {
   var SCESIM = {
     name: 'SCESIM',
     typeInfos: [{
-        localName: 'ImportType',
-        propertyInfos: [{
-            name: 'type',
-            required: true,
-            elementName: {
-              localPart: 'type'
-            }
-          }]
-      }, {
-        localName: 'ExpressionIdentifierType',
-        typeName: 'expressionIdentifierType',
-        propertyInfos: [{
-            name: 'name',
-            elementName: {
-              localPart: 'name'
-            }
-          }, {
-            name: 'type',
-            elementName: {
-              localPart: 'type'
-            }
-          }]
-      }, {
-        localName: 'FactIdentifierType',
-        typeName: 'factIdentifierType',
-        propertyInfos: [{
-            name: 'name',
-            elementName: {
-              localPart: 'name'
-            }
-          }, {
-            name: 'className',
-            elementName: {
-              localPart: 'className'
-            }
-          }, {
-            name: 'importPrefix',
-            attributeName: {
-              localPart: 'importPrefix'
-            },
-            type: 'attribute'
-          }]
-      }, {
-        localName: 'BackgroundType',
-        typeName: 'backgroundType',
-        propertyInfos: [{
-            name: 'scesimModelDescriptor',
-            required: true,
-            elementName: {
-              localPart: 'scesimModelDescriptor'
-            },
-            typeInfo: '.ScesimModelDescriptorType'
-          }, {
-            name: 'scesimData',
-            required: true,
-            elementName: {
-              localPart: 'scesimData'
-            },
-            typeInfo: '.BackgroundDatasType'
-          }]
-      }, {
-        localName: 'BackgroundDatasType',
-        typeName: 'backgroundDatasType',
-        propertyInfos: [{
-            name: 'backgroundData',
-            minOccurs: 0,
-            collection: true,
-            elementName: {
-              localPart: 'BackgroundData'
-            },
-            typeInfo: '.BackgroundDataType'
-          }]
-      }, {
-        localName: 'GenericTypes',
-        typeName: 'genericTypes',
-        propertyInfos: [{
-            name: 'string',
-            minOccurs: 0,
-            collection: true,
-            elementName: {
-              localPart: 'string'
-            }
-          }]
-      }, {
-        localName: 'FactMappingValuesType',
-        typeName: 'factMappingValuesType',
-        propertyInfos: [{
-            name: 'factMappingValue',
-            minOccurs: 0,
-            collection: true,
-            elementName: {
-              localPart: 'FactMappingValue'
-            },
-            typeInfo: '.FactMappingValueType'
-          }]
-      }, {
-        localName: 'RawValueType',
-        typeName: 'rawValueType',
-        propertyInfos: [{
-            name: 'value',
-            type: 'value'
-          }, {
-            name: 'clazz',
-            attributeName: {
-              localPart: 'class'
-            },
-            type: 'attribute'
-          }]
-      }, {
-        localName: 'FactMappingValueType',
-        propertyInfos: [{
-            name: 'factIdentifier',
-            required: true,
-            elementName: {
-              localPart: 'factIdentifier'
-            },
-            typeInfo: '.FactIdentifierType'
-          }, {
-            name: 'expressionIdentifier',
-            required: true,
-            elementName: {
-              localPart: 'expressionIdentifier'
-            },
-            typeInfo: '.ExpressionIdentifierType'
-          }, {
-            name: 'rawValue',
-            elementName: {
-              localPart: 'rawValue'
-            },
-            typeInfo: '.RawValueType'
-          }]
-      }, {
-        localName: 'ScenarioType',
-        propertyInfos: [{
-            name: 'factMappingValues',
-            required: true,
-            elementName: {
-              localPart: 'factMappingValues'
-            },
-            typeInfo: '.FactMappingValuesType'
-          }]
-      }, {
-        localName: 'BackgroundDataType',
-        propertyInfos: [{
-            name: 'factMappingValues',
-            required: true,
-            elementName: {
-              localPart: 'factMappingValues'
-            },
-            typeInfo: '.FactMappingValuesType'
-          }]
-      }, {
-        localName: 'ImportsType',
-        typeName: 'importsType',
-        propertyInfos: [{
-            name: 'imports',
-            elementName: {
-              localPart: 'imports'
-            },
-            typeInfo: '.WrappedImportsType'
-          }]
-      }, {
         localName: 'ExpressionElementsType',
         typeName: 'expressionElementsType',
         propertyInfos: [{
@@ -176,92 +14,13 @@ var SCESIM_Module_Factory = function () {
             typeInfo: '.ExpressionElementType'
           }]
       }, {
-        localName: 'ScesimModelDescriptorType',
-        typeName: 'scesimModelDescriptorType',
+        localName: 'ExpressionElementType',
         propertyInfos: [{
-            name: 'factMappings',
-            elementName: {
-              localPart: 'factMappings'
-            },
-            typeInfo: '.FactMappingsType'
-          }]
-      }, {
-        localName: 'FactMappingType',
-        propertyInfos: [{
-            name: 'expressionElements',
+            name: 'step',
             required: true,
             elementName: {
-              localPart: 'expressionElements'
-            },
-            typeInfo: '.ExpressionElementsType'
-          }, {
-            name: 'expressionIdentifier',
-            required: true,
-            elementName: {
-              localPart: 'expressionIdentifier'
-            },
-            typeInfo: '.ExpressionIdentifierType'
-          }, {
-            name: 'factIdentifier',
-            required: true,
-            elementName: {
-              localPart: 'factIdentifier'
-            },
-            typeInfo: '.FactIdentifierType'
-          }, {
-            name: 'className',
-            required: true,
-            elementName: {
-              localPart: 'className'
+              localPart: 'step'
             }
-          }, {
-            name: 'factAlias',
-            required: true,
-            elementName: {
-              localPart: 'factAlias'
-            }
-          }, {
-            name: 'expressionAlias',
-            elementName: {
-              localPart: 'expressionAlias'
-            }
-          }, {
-            name: 'genericTypes',
-            required: true,
-            elementName: {
-              localPart: 'genericTypes'
-            },
-            typeInfo: '.GenericTypes'
-          }, {
-            name: 'columnWidth',
-            required: true,
-            elementName: {
-              localPart: 'columnWidth'
-            },
-            typeInfo: 'Double'
-          }, {
-            name: 'factMappingValueType',
-            elementName: {
-              localPart: 'factMappingValueType'
-            }
-          }]
-      }, {
-        localName: 'SimulationType',
-        typeName: 'simulationType',
-        propertyInfos: [{
-            name: 'scesimModelDescriptor',
-            required: true,
-            elementName: {
-              localPart: 'scesimModelDescriptor'
-            },
-            typeInfo: '.ScesimModelDescriptorType'
-          }, {
-            name: 'scesimData',
-            required: true,
-            elementName: {
-              localPart: 'scesimData'
-            },
-            typeInfo: '.ScenariosType'
           }]
       }, {
         localName: 'ScenariosType',
@@ -276,55 +35,6 @@ var SCESIM_Module_Factory = function () {
             typeInfo: '.ScenarioType'
           }]
       }, {
-        localName: 'ScenarioSimulationModelType',
-        propertyInfos: [{
-            name: 'simulation',
-            required: true,
-            elementName: {
-              localPart: 'simulation'
-            },
-            typeInfo: '.SimulationType'
-          }, {
-            name: 'background',
-            required: true,
-            elementName: {
-              localPart: 'background'
-            },
-            typeInfo: '.BackgroundType'
-          }, {
-            name: 'settings',
-            required: true,
-            elementName: {
-              localPart: 'settings'
-            },
-            typeInfo: '.SettingsType'
-          }, {
-            name: 'imports',
-            required: true,
-            elementName: {
-              localPart: 'imports'
-            },
-            typeInfo: '.ImportsType'
-          }, {
-            name: 'version',
-            attributeName: {
-              localPart: 'version'
-            },
-            type: 'attribute'
-          }]
-      }, {
-        localName: 'WrappedImportsType',
-        typeName: 'wrappedImportsType',
-        propertyInfos: [{
-            name: '_import',
-            minOccurs: 0,
-            collection: true,
-            elementName: {
-              localPart: 'Import'
-            },
-            typeInfo: '.ImportType'
-          }]
-      }, {
         localName: 'FactMappingsType',
         typeName: 'factMappingsType',
         propertyInfos: [{
@@ -335,6 +45,16 @@ var SCESIM_Module_Factory = function () {
               localPart: 'FactMapping'
             },
             typeInfo: '.FactMappingType'
+          }]
+      }, {
+        localName: 'BackgroundDataType',
+        propertyInfos: [{
+            name: 'factMappingValues',
+            required: true,
+            elementName: {
+              localPart: 'factMappingValues'
+            },
+            typeInfo: '.FactMappingValuesType'
           }]
       }, {
         localName: 'SettingsType',
@@ -398,13 +118,293 @@ var SCESIM_Module_Factory = function () {
             typeInfo: 'Boolean'
           }]
       }, {
-        localName: 'ExpressionElementType',
+        localName: 'FactMappingType',
         propertyInfos: [{
-            name: 'step',
+            name: 'expressionElements',
             required: true,
             elementName: {
-              localPart: 'step'
+              localPart: 'expressionElements'
+            },
+            typeInfo: '.ExpressionElementsType'
+          }, {
+            name: 'expressionIdentifier',
+            required: true,
+            elementName: {
+              localPart: 'expressionIdentifier'
+            },
+            typeInfo: '.ExpressionIdentifierType'
+          }, {
+            name: 'factIdentifier',
+            required: true,
+            elementName: {
+              localPart: 'factIdentifier'
+            },
+            typeInfo: '.FactIdentifierType'
+          }, {
+            name: 'className',
+            required: true,
+            elementName: {
+              localPart: 'className'
             }
+          }, {
+            name: 'factAlias',
+            required: true,
+            elementName: {
+              localPart: 'factAlias'
+            }
+          }, {
+            name: 'expressionAlias',
+            elementName: {
+              localPart: 'expressionAlias'
+            }
+          }, {
+            name: 'genericTypes',
+            required: true,
+            elementName: {
+              localPart: 'genericTypes'
+            },
+            typeInfo: '.GenericTypes'
+          }, {
+            name: 'columnWidth',
+            required: true,
+            elementName: {
+              localPart: 'columnWidth'
+            },
+            typeInfo: 'Double'
+          }, {
+            name: 'factMappingValueType',
+            elementName: {
+              localPart: 'factMappingValueType'
+            }
+          }]
+      }, {
+        localName: 'FactIdentifierType',
+        typeName: 'factIdentifierType',
+        propertyInfos: [{
+            name: 'name',
+            elementName: {
+              localPart: 'name'
+            }
+          }, {
+            name: 'className',
+            elementName: {
+              localPart: 'className'
+            }
+          }, {
+            name: 'importPrefix',
+            attributeName: {
+              localPart: 'importPrefix'
+            },
+            type: 'attribute'
+          }]
+      }, {
+        localName: 'ScenarioType',
+        propertyInfos: [{
+            name: 'factMappingValues',
+            required: true,
+            elementName: {
+              localPart: 'factMappingValues'
+            },
+            typeInfo: '.FactMappingValuesType'
+          }]
+      }, {
+        localName: 'WrappedImportsType',
+        typeName: 'wrappedImportsType',
+        propertyInfos: [{
+            name: '_import',
+            minOccurs: 0,
+            collection: true,
+            elementName: {
+              localPart: 'Import'
+            },
+            typeInfo: '.ImportType'
+          }]
+      }, {
+        localName: 'BackgroundType',
+        typeName: 'backgroundType',
+        propertyInfos: [{
+            name: 'scesimModelDescriptor',
+            required: true,
+            elementName: {
+              localPart: 'scesimModelDescriptor'
+            },
+            typeInfo: '.ScesimModelDescriptorType'
+          }, {
+            name: 'scesimData',
+            required: true,
+            elementName: {
+              localPart: 'scesimData'
+            },
+            typeInfo: '.BackgroundDatasType'
+          }]
+      }, {
+        localName: 'BackgroundDatasType',
+        typeName: 'backgroundDatasType',
+        propertyInfos: [{
+            name: 'backgroundData',
+            minOccurs: 0,
+            collection: true,
+            elementName: {
+              localPart: 'BackgroundData'
+            },
+            typeInfo: '.BackgroundDataType'
+          }]
+      }, {
+        localName: 'RawValueType',
+        typeName: 'rawValueType',
+        propertyInfos: [{
+            name: 'value',
+            type: 'value'
+          }, {
+            name: 'clazz',
+            attributeName: {
+              localPart: 'class'
+            },
+            type: 'attribute'
+          }]
+      }, {
+        localName: 'FactMappingValueType',
+        propertyInfos: [{
+            name: 'factIdentifier',
+            required: true,
+            elementName: {
+              localPart: 'factIdentifier'
+            },
+            typeInfo: '.FactIdentifierType'
+          }, {
+            name: 'expressionIdentifier',
+            required: true,
+            elementName: {
+              localPart: 'expressionIdentifier'
+            },
+            typeInfo: '.ExpressionIdentifierType'
+          }, {
+            name: 'rawValue',
+            elementName: {
+              localPart: 'rawValue'
+            },
+            typeInfo: '.RawValueType'
+          }]
+      }, {
+        localName: 'ScenarioSimulationModelType',
+        propertyInfos: [{
+            name: 'simulation',
+            required: true,
+            elementName: {
+              localPart: 'simulation'
+            },
+            typeInfo: '.SimulationType'
+          }, {
+            name: 'background',
+            required: true,
+            elementName: {
+              localPart: 'background'
+            },
+            typeInfo: '.BackgroundType'
+          }, {
+            name: 'settings',
+            required: true,
+            elementName: {
+              localPart: 'settings'
+            },
+            typeInfo: '.SettingsType'
+          }, {
+            name: 'imports',
+            required: true,
+            elementName: {
+              localPart: 'imports'
+            },
+            typeInfo: '.ImportsType'
+          }, {
+            name: 'version',
+            attributeName: {
+              localPart: 'version'
+            },
+            type: 'attribute'
+          }]
+      }, {
+        localName: 'ExpressionIdentifierType',
+        typeName: 'expressionIdentifierType',
+        propertyInfos: [{
+            name: 'name',
+            elementName: {
+              localPart: 'name'
+            }
+          }, {
+            name: 'type',
+            elementName: {
+              localPart: 'type'
+            }
+          }]
+      }, {
+        localName: 'GenericTypes',
+        typeName: 'genericTypes',
+        propertyInfos: [{
+            name: 'string',
+            minOccurs: 0,
+            collection: true,
+            elementName: {
+              localPart: 'string'
+            }
+          }]
+      }, {
+        localName: 'ImportType',
+        propertyInfos: [{
+            name: 'type',
+            required: true,
+            elementName: {
+              localPart: 'type'
+            }
+          }]
+      }, {
+        localName: 'FactMappingValuesType',
+        typeName: 'factMappingValuesType',
+        propertyInfos: [{
+            name: 'factMappingValue',
+            minOccurs: 0,
+            collection: true,
+            elementName: {
+              localPart: 'FactMappingValue'
+            },
+            typeInfo: '.FactMappingValueType'
+          }]
+      }, {
+        localName: 'SimulationType',
+        typeName: 'simulationType',
+        propertyInfos: [{
+            name: 'scesimModelDescriptor',
+            required: true,
+            elementName: {
+              localPart: 'scesimModelDescriptor'
+            },
+            typeInfo: '.ScesimModelDescriptorType'
+          }, {
+            name: 'scesimData',
+            required: true,
+            elementName: {
+              localPart: 'scesimData'
+            },
+            typeInfo: '.ScenariosType'
+          }]
+      }, {
+        localName: 'ImportsType',
+        typeName: 'importsType',
+        propertyInfos: [{
+            name: 'imports',
+            elementName: {
+              localPart: 'imports'
+            },
+            typeInfo: '.WrappedImportsType'
+          }]
+      }, {
+        localName: 'ScesimModelDescriptorType',
+        typeName: 'scesimModelDescriptorType',
+        propertyInfos: [{
+            name: 'factMappings',
+            elementName: {
+              localPart: 'factMappings'
+            },
+            typeInfo: '.FactMappingsType'
           }]
       }],
     elementInfos: [{
